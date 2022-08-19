@@ -1,8 +1,11 @@
+import 'package:cis/models/data_model.dart';
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 
 class ShowDataPage extends StatelessWidget {
-  const ShowDataPage({Key? key}) : super(key: key);
+  const ShowDataPage({Key? key, required this.data}) : super(key: key);
+
+  final DataModel data;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +18,7 @@ class ShowDataPage extends StatelessWidget {
           image: DecorationImage(
               image: AssetImage('assets/background.png'), fit: BoxFit.cover),
         ),
-        child: ListView(
+        child: Column(
           children: [
             const SizedBox(height: 50),
             Text(
@@ -41,7 +44,7 @@ class ShowDataPage extends StatelessWidget {
                         fontSize: 14, fontWeight: regular),
                   ),
                   Text(
-                    'Robert Vancini',
+                    data.fullName,
                     style: whiteTextStyle.copyWith(
                         fontSize: 16, fontWeight: medium),
                   ),
@@ -52,7 +55,7 @@ class ShowDataPage extends StatelessWidget {
                         fontSize: 14, fontWeight: regular),
                   ),
                   Text(
-                    '00307734661268',
+                    data.nik,
                     style: whiteTextStyle.copyWith(
                         fontSize: 16, fontWeight: medium),
                   ),
@@ -63,7 +66,7 @@ class ShowDataPage extends StatelessWidget {
                         fontSize: 14, fontWeight: regular),
                   ),
                   Text(
-                    'Laki-laki',
+                    data.gender,
                     style: whiteTextStyle.copyWith(
                         fontSize: 16, fontWeight: medium),
                   ),
@@ -74,18 +77,7 @@ class ShowDataPage extends StatelessWidget {
                         fontSize: 14, fontWeight: regular),
                   ),
                   Text(
-                    'Jl. Martadinata, Soreang, Kab. Bandung, Jawa Barat',
-                    style: whiteTextStyle.copyWith(
-                        fontSize: 16, fontWeight: medium),
-                  ),
-                  const SizedBox(height: 24),
-                  Text(
-                    'Pekerjaan',
-                    style: whiteTextStyle.copyWith(
-                        fontSize: 14, fontWeight: regular),
-                  ),
-                  Text(
-                    'Mahasiswa',
+                    data.address,
                     style: whiteTextStyle.copyWith(
                         fontSize: 16, fontWeight: medium),
                   ),
@@ -96,18 +88,7 @@ class ShowDataPage extends StatelessWidget {
                         fontSize: 14, fontWeight: regular),
                   ),
                   Text(
-                    'Belum Menikah',
-                    style: whiteTextStyle.copyWith(
-                        fontSize: 16, fontWeight: medium),
-                  ),
-                  const SizedBox(height: 24),
-                  Text(
-                    'Golongan Darah',
-                    style: whiteTextStyle.copyWith(
-                        fontSize: 14, fontWeight: regular),
-                  ),
-                  Text(
-                    'O',
+                    data.statusPernikahan,
                     style: whiteTextStyle.copyWith(
                         fontSize: 16, fontWeight: medium),
                   ),

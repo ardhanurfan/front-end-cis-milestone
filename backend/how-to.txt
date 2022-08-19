@@ -1,0 +1,24 @@
+how to request for data:
+url: localhost:8080/person
+http method: GET
+
+json request:
+{
+"nik":"2002001"
+}
+
+NIK range: 2002001-2002009
+
+response:
+{
+    "personId": 1,
+    "nik": "2002001",
+    "fullName": "Zidane F.",
+    "gender": "Laki-laki",
+    "address": "Jalan Ganesha",
+    "statusPernikahan": "Belum Menikah"
+}
+
+how to run:
+1. install java 18
+2. open cmd, point directory to jar folder. type: java -jar data-source-nfc-0.0.1-SNAPSHOT.jar

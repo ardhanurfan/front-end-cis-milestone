@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:cis/cubit/data_cubit.dart';
 import 'package:cis/cubit/features_cubit.dart';
 import 'package:cis/ui/pages/coming.dart';
 import 'package:cis/ui/pages/failed_page.dart';
@@ -23,6 +26,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => FeaturesCubit()),
+        BlocProvider(create: (context) => DataCubit()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -31,11 +35,9 @@ class MyApp extends StatelessWidget {
           '/get-started': (context) => const GetStartedPage(),
           '/scan': (context) => const ScanPage(),
           '/home': (context) => const HomePage(),
-          '/show-data': (context) => const ShowDataPage(),
           '/failed': (context) => const FailedPage(),
           '/validate': (context) => const ValidatePage(),
           '/coming': (context) => const ComingSoon(),
-          '/fill-form': (context) => const FillForm(),
         },
       ),
     );
