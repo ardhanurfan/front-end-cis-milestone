@@ -1,6 +1,6 @@
 # cis
 
-A new Flutter project.
+A Milestone project Cemara Identity Scanner. a mobile application that has the goal of reducing the use of physical photocopies of e-KTP. This application utilizes the NFC feature which can be used to scan data on the card. There are several features, such as displaying data, auto fill forms, validating data and cards, and the "connect" feature to be integrated and maintain security by knowing the whereabouts of the scan location.
 
 ## Getting Started
 
